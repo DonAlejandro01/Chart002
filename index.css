@@ -1,35 +1,149 @@
-*{
+
+/* =========================
+   Reset y configuración base
+========================= */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+/* =========================
+   Configuración global
+========================= */
+html {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+
     font-size: 16px;
     scroll-behavior: smooth;
-}
-body{
-    margin: 0 auto;
-    min-height: 100vh;
-    width: 100%;
-     background: #f4f6f9;
-  color: #1f2937;
-  line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
 }
 
+body {
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* =========================
+   Contenido principal
+========================= */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    height: 85vh;
+    padding-block: 2rem;
+}
+.Indicadores{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.Indicadores > div{
+  width: 20rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 5rem;
+-webkit-box-shadow: 1px 1px 18px -5px #000000; 
+box-shadow: 1px 1px 18px -5px #000000;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+.Indicadores > div{
+  width: 20rem;
+  height: 5rem;
+  padding: 1rem;
+  
+-webkit-box-shadow: 1px 1px 18px -5px #000000; 
+box-shadow: 1px 1px 18px -5px #000000;
+}
+.Indicadores > div >h3{
+  text-align: center;
+  font-size: 2rem;
+}
+.Graficos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Graficos canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* =========================
+   Enlaces
+========================= */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
 a:hover {
-  color: #1d4ed8;
+    color: #1d4ed8;
+    text-decoration: underline;
 }
 
 a:focus-visible {
-  outline: 2px solid #2563eb;
-  outline-offset: 4px;
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+    border-radius: 2px;
 }
 
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+/* =========================
+   Pie de página
+========================= */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* =========================
+   Accesibilidad
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }

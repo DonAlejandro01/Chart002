@@ -1,15 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Practico graficos - Chart 02</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-     <footer>
-        <a href="https://github.com/DonAlejandro01">GitHub</a>
-        <a href="https://www.linkedin.com/in/alejandrodperezn/?isSelfProfile=true">Linkedin</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practico graficos - Chart 02</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Segundo Practico de Chart.js</h1>
+    </header>
+    <main>
+      <div class="Indicadores">
+        <div class="Indicadores-PD">
+          <h3 id="LastPD" class="Last"></h3>
+          <h3 id="PD-Resultado" class="Resultado"></h3>
+          <h3 id="RfPD" class="RF26"></h3>
+        </div>
+        <div class="Indicadores-KG">
+          <h3 id="LastKG" class="Last"></h3>
+          <h3 id="KG-Resultado" class="Resultado"></h3>
+          <h3 id="RfKG" class="RF26"></h3>
+        </div>
+        <div class="Indicadores-HC">
+          <h3 id="LastHC" class="Last"></h3>
+          <h3 id="HC-Resultado" class="Resultado"></h3>
+          <h3 id="RfHC" class="RF26"></h3>
+        </div>
+      </div>
+      <div class="Graficos">
+        <canvas id="Grafico-PD"></canvas>
+        <canvas id="Grafico-KG"></canvas>
+        <canvas id="Grafico-HC"></canvas>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/DonAlejandro01">GitHub</a>
+      <a href="https://www.linkedin.com/in/alejandrodperezn/?isSelfProfile=true"
+        >Linkedin</a
+      >
     </footer>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script  src="chart.js"></script>
+  </body>
 </html>
